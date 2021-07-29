@@ -1,6 +1,6 @@
 export const bgColor = {
     light: 'white',
-    dark: '#171923'
+    dark: '#000000'
 };
 
 export const primaryTextColor = {
@@ -10,7 +10,7 @@ export const primaryTextColor = {
 
 export const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
-    dark: 'rgba(23, 25, 35, 0.8)'
+    dark: 'rgba(0, 0, 0, 0.8)'
 };
 
 
@@ -21,7 +21,7 @@ export const secondaryTextColor = {
 
 
 export const borderColor = {
-    light: 'gray.200',
+    light: 'gray.400',
     dark: 'gray.600'
 };
 
