@@ -5,6 +5,8 @@ import {
   useColorMode,
   Image,
   Flex,
+  Stack,
+  SimpleGrid,
   Heading,
   chakra,
   Link as ChakraLink,
@@ -12,6 +14,7 @@ import {
   Button,
   Divider
 } from '@chakra-ui/react';
+import CanvasCard from "../components/CanvasCard";
 
 import SimpleStorageContract from "../contracts/SimpleStorage.json";
 import getWeb3 from "../getWeb3";
@@ -66,34 +69,51 @@ class App extends Component {
   // };
 
   render() {
-    if (!this.state.web3) {
+    // if (!this.state.web3) {
       
-      return (
-      <>
-          <Container>
-            <div>Loading Web3, accounts, and contract...</div>;
-          </Container>
-      </>)
-    }
+    //   return (
+    //   <>
+    //       <Container>
+    //         <div>Loading Web3, accounts, and contract...</div>;
+    //       </Container>
+    //   </>)
+    // }
     
     return (
         <Container>
-          <div className="App">
-            <h1>Good to Go!</h1>
-            <p>Your Truffle Box is installed and ready.</p>
-            <h2>Smart Contract Example</h2>
-            <p>
-              If your contracts compiled and migrated successfully, below will show
-              a stored value of 5 (by default).
-            </p>
-            <p>
-              Try changing the value stored on <strong>line 42</strong> of App.js.
-            </p>
-            {/* <div>The stored value is: {this.state.storageValue}</div> */}
-            <Button colorScheme="teal" variant="ghost">
-              Button
-            </Button>
-          </div>
+            <Stack
+                as="main"
+                spacing={8}
+                justifyContent="center"
+                alignItems="flex-start"
+                m="0 auto 4rem auto"
+            >
+                <Flex
+                    flexDirection="column"
+                    justifyContent="flex-start"
+                    alignItems="flex-start"
+                >
+                    <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
+                        Your Dashboard
+                    </Heading>
+                    <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
+                      <CanvasCard 
+                        key='Devfolio'
+                        imageURL='test1.png'
+                        title='EthIndia Odyssey'
+                        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
+                        githubLink='https://github.com/DaKeiser/portfolio'
+                      />
+                      <CanvasCard 
+                        key='Devfolio'
+                        imageURL='test1.png'
+                        title='EthIndia Odyssey'
+                        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
+                        githubLink='https://github.com/DaKeiser/portfolio'
+                      />                      
+                    </SimpleGrid>   
+                    </Flex>
+              </Stack>
         </Container>
     );
   }

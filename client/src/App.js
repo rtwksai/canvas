@@ -51,14 +51,3 @@ function App() {
 }
 
 export default App
-
-
-// export default function App() {
-//   return (
-//     <React.Fragment>
-//       <Suspense fallback={<LoadingPage />}>
-//         <SiteRoutes />
-//       </Suspense>
-//     </React.Fragment>
-//   );
-// }
