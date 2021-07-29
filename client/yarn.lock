@@ -9662,7 +9662,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.3"
 
-"prop-types@^15.0.0", "prop-types@^15.5.8", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -9925,6 +9925,11 @@
     "use-callback-ref" "^1.2.1"
     "use-sidecar" "^1.0.1"
 
+"react-ga@^3.3.0":
+  "integrity" "sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ=="
+  "resolved" "https://registry.npmjs.org/react-ga/-/react-ga-3.3.0.tgz"
+  "version" "3.3.0"
+
 "react-icons@^4.2.0":
   "integrity" "sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ=="
   "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.2.0.tgz"
@@ -10071,7 +10076,7 @@
     "invariant" "^2.2.4"
     "tslib" "^1.0.0"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.0.0", "react@^16.4.0", "react@^16.8.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^16.8.4", "react@>= 16.8", "react@>= 16.8.0", "react@>=15", "react@>=15.6.2", "react@>=16.3.0", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@16.11.0":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^15.6.2 || ^16.0 || ^17", "react@^16.0.0", "react@^16.4.0", "react@^16.8.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^16.8.4", "react@>= 16.8", "react@>= 16.8.0", "react@>=15", "react@>=15.6.2", "react@>=16.3.0", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@16.11.0":
   "integrity" "sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.11.0.tgz"
   "version" "16.11.0"
