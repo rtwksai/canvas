@@ -6,7 +6,7 @@ import {
     ButtonGroup, 
     IconButton 
 } from '@chakra-ui/react'
-import { FaRegEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaRegEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
 import * as React from 'react'
 import { Text } from '@chakra-ui/layout'
 import { linkColor } from '../styles/darkMode';

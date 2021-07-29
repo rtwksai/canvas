@@ -1,6 +1,4 @@
 import React, { Component, useState } from "react";
-import { ChakraProvider } from "@chakra-ui/react"
-// import "./App.css";
 import { linkColor } from '../styles/darkMode'
 import Container from '../components/Container'
 import {
@@ -72,16 +70,13 @@ class App extends Component {
       
       return (
       <>
-        <ChakraProvider>
           <Container>
             <div>Loading Web3, accounts, and contract...</div>;
           </Container>
-        </ChakraProvider>
       </>)
     }
     
     return (
-      <ChakraProvider>
         <Container>
           <div className="App">
             <h1>Good to Go!</h1>
@@ -100,7 +95,6 @@ class App extends Component {
             </Button>
           </div>
         </Container>
-      </ChakraProvider>
     );
   }
 }
