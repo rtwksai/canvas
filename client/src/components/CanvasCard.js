@@ -1,16 +1,17 @@
 import {
-    TagLeftIcon,
+    TagLabel,
     Tag,
     Text,
     Stack,
     Divider,
-    TagLabel,
     Link,
     Image,
     Skeleton,
     useColorMode,
     ScaleFade
 } from '@chakra-ui/react'
+
+import { useMediaQuery } from 'react-responsive';
 
 import {
     FaGithub,
@@ -36,9 +37,38 @@ export default function CanvasCard({
     desc,
     githubLink,
     deployLink,
+    tag
 }) {
     const { colorMode } = useColorMode()
     const [opacity, setOpacity] = useState(0)
+    const getTag = (tag) => {
+        let values = []
+        if (tag == 'Online') {
+            values[0] = 'blue' 
+        } 
+        else if (tag == 'Sold') {
+            values[0] = 'red'    
+        }
+        else if (tag == 'For Sale') {
+            values[0] = 'green'
+        }
+        else {
+            values[0] = 'gray'
+        }
+        return values
+    }
+    
+    const isBigScreen = useMediaQuery({ minWidth: 600 });
+
+    const Tags = tag.map((item) => (
+        <Tag
+            key={item}
+            colorScheme={getTag(item)[0]}
+            size={isBigScreen ? 'md' : 'sm'}
+        >
+            <TagLabel>{item}</TagLabel>
+        </Tag>
+    ))
 
     const handleClick = (event) => {
         ReactGA.event({
@@ -91,6 +121,7 @@ export default function CanvasCard({
                 <Text fontSize="2xl" color={primaryTextColor[colorMode]}>
                     <strong>{title}</strong>
                 </Text>
+                {Tags}
             </Stack>
             <Divider />
             <Text color={secondaryTextColor[colorMode]} fontSize={['sm', 'sm']}>

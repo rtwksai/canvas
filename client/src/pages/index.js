@@ -103,6 +103,7 @@ class App extends Component {
                         title='EthIndia Odyssey'
                         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
                         githubLink='https://github.com/DaKeiser/portfolio'
+                        tag={["Online"]}
                       />
                       <CanvasCard 
                         key='Devfolio'
@@ -110,6 +111,7 @@ class App extends Component {
                         title='EthIndia Odyssey'
                         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
                         githubLink='https://github.com/DaKeiser/portfolio'
+                        tag={["For Sale"]}
                       />                      
                     </SimpleGrid>   
                     </Flex>
