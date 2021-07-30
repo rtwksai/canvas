@@ -37,6 +37,6 @@ export const linkColor = {
 };
 
 export const shadowColor = {
-    light: '0px 8px 26px rgba(0, 0, 0, 0.1)',
-    dark: '0px 8px 26px rgba(0, 0, 0, 0.9)'
+    light: '0px 8px 26px rgba(0, 0, 0, 0.5)',
+    dark: '0px 8px 26px rgba(255, 255, 255, 0.3)'
 }

@@ -41,7 +41,7 @@ const isBigScreen = useMediaQuery({ minWidth: 600 });
 const { isOpen, onOpen, onClose } = useDisclosure();
 
 const getLink = ({ href, text }) => (
-    <ChakraLink href={href}>
+    <ChakraLink href={href} style={{ textDecoration: 'none' }}>
         <Button as="a" variant="ghost" p={[6, 4]} fontSize={['xl', 'lg']}>
             {text}
         </Button>

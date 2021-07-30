@@ -50,6 +50,11 @@ export default function CanvasCard({
     const [imageLoad, setImageLoad] = useState(false);
 
     return (
+        <Link
+            href={deployLink}
+            title={title}
+            style={{ textDecoration: 'none' }}
+        >
         <Stack
             bg="secondary"
             borderRadius="10px"
@@ -58,6 +63,7 @@ export default function CanvasCard({
             maxW="350px"
             border="1px"
             borderColor={{ base: '#333', md: borderColor[colorMode] }}
+            transition="0.3s"
             _hover={{
                 boxShadow: shadowColor[colorMode],
                 textDecoration: 'none'
@@ -85,35 +91,6 @@ export default function CanvasCard({
                 <Text fontSize="2xl" color={primaryTextColor[colorMode]}>
                     <strong>{title}</strong>
                 </Text>
-                <Stack
-                    isInline
-                    justifyContent="flex-end"
-                    alignItems="center"
-                    spacing={4}
-                >
-                    {githubLink && (
-                    <Link
-                        href={githubLink}
-                        color={iconColor[colorMode]}
-                        onClick={() =>
-                        handleClick(`githublink_${title.replace('@', '-at-')}`)
-                        }
-                    >
-                        <FaGithub size={23} />
-                    </Link>
-                    )}
-                    {deployLink && (
-                    <Link
-                        href={deployLink}
-                        color={iconColor[colorMode]}
-                        onClick={() =>
-                        handleClick(`deploylink_${title.replace('@', '-at')}`)
-                        }
-                    >
-                        <FaExternalLinkAlt size={20} />
-                    </Link>
-                    )}
-                </Stack>
             </Stack>
             <Divider />
             <Text color={secondaryTextColor[colorMode]} fontSize={['sm', 'sm']}>
@@ -122,5 +99,6 @@ export default function CanvasCard({
             </Stack>
         </ScaleFade>
         </Stack>
+        </Link>
     )
 }
