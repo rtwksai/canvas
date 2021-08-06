@@ -39,8 +39,7 @@ const GlobalStyle = ({children}) => {
 	)
 
 }
-
-function App() {
+const App = () => {
 	return (
 		<ChakraProvider resetCSS theme={customTheme}>
 			<GlobalStyle> 

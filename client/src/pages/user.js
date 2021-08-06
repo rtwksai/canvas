@@ -12,8 +12,7 @@ import {
   Link as ChakraLink,
   Skeleton,
   Button,
-  Divider,
-  Text
+  Divider
 } from '@chakra-ui/react';
 import CanvasCard from "../components/CanvasCard";
 
@@ -95,10 +94,9 @@ class App extends Component {
                     alignItems="flex-start"
                 >
                     <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
-                        Welcome to EveNFT
+                        Hi user!
                     </Heading>
                     <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
-                    <Text fontSize="4xl">Create Event!</Text>
                       {/* <CanvasCard 
                         key='Devfolio'
                         imageURL='test1.png'
@@ -106,8 +104,8 @@ class App extends Component {
                         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
                         githubLink='https://github.com/DaKeiser/portfolio'
                         tag={["Online"]}
-                      /> */}
-                      {/* <CanvasCard 
+                      />
+                      <CanvasCard 
                         key='Devfolio'
                         imageURL='test1.png'
                         title='EthIndia Odyssey'

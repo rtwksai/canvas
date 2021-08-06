@@ -23,6 +23,14 @@ const LINKS = [
     {
         href: '/',
         text: 'home'
+    },
+    {
+        href: '/events',
+        text: 'events'
+    },
+    {
+        href: '/user',
+        text: 'dashboard'
     }
 ];
 
