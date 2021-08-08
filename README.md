@@ -2,6 +2,10 @@
 
 ## Getting Started
 
+Clone the following repositories in the same folder
+- [Frontend](https://github.com/DaKeiser/canvas)
+- [Backend](https://github.com/Dragonsa15/EveNFT-BackendSolidity/tree/staging)
+
 First you must compile and migrate the contracts from this [Backend Repository](https://github.com/Dragonsa15/EveNFT-BackendSolidity/tree/staging)
 
 ```bash
