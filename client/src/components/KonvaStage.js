@@ -43,6 +43,7 @@ const KonvaStage = (props) => {
           <PixelsMap pixels={props.pixels}
                      pixelSize={props.pixelSize}
                      gridColumns={props.gridColumns}
+                     changePixel={props.changePixel}
           />
         </Layer>
       </Stage>

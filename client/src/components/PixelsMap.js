@@ -10,6 +10,7 @@ const PixelsMap = (props) => {
         pixelSize={props.pixelSize}
         gridColumns={props.gridColumns}
         key={index}
+        changePixel={props.changePixel}
       />
     )
   ]

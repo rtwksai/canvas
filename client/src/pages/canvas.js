@@ -20,21 +20,53 @@ import CanvasCard from "../components/CanvasCard";
 
 import SimpleStorageContract from "../contracts/SimpleStorage.json";
 import getWeb3 from "../getWeb3";
-import CanvasPixels from  "../components/CanvasPixels";
+// import CanvasPixels from  "../components/CanvasPixels";
 import KonvaStage from "../components/KonvaStage";
+import ColorPicker from "../components/colorPicker";
+
 
 
 class Canvas extends React.Component {
+
+  async componentDidMount() {
+    let id = this.props.match.params.id
+
+    const res = await fetch(`http://localhost:5000/event/${id}`)
+    const data = await res.json()
+
+    console.log(data)
+    this.setState({canvasState : data['canvas']})
+  }
+
+  initialState = Array.from(Array(25).keys());
   state = { storageValue: 0, 
             web3: null, 
             accounts: null, 
             contract: null, 
             imageLoad: false, 
-            setImageLoad: false};
+            setImageLoad: false,
+            canvasState: this.initialState,
+            brushColor: '#ffff9e'};
 
+  changePixelState = (x, y, id, color, brush=true) => {
+    console.log("from canvas.js")
+    console.log("x=" + x + " y=" + y + " color=" + color);
+    console.log(this.state.canvasState)
+    let newCanvasState = this.state.canvasState;
+    console.log("brush" + brush)
+    newCanvasState[id] = brush ? this.state.brushColor : color;
+    console.log(this.state.canvasState)
+    console.log(newCanvasState)
+    this.setState({ canvasState : newCanvasState })
+  }
+
+  changeBrush = (color) => {
+    this.setState({brushColor : color})
+  }
+  
   render() {
-      console.log("Event 1")
-      console.log(this.props.match)
+      // console.log("Event " + this.props.match.params.id)
+      // console.log(this.props.match)
     return (
         <Container>
             <Stack
@@ -56,30 +88,11 @@ class Canvas extends React.Component {
                     <Text fontSize="3xl">Be a part of EthOdyssey forever!!</Text>
                       
                     </SimpleGrid>
-                    {/* <SimpleGrid columns={50} rows={50} spacingX="0px" spacingY="0px">
-
-												<CanvasPixels numPixels={2500} />
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                        <Box bg="tomato" width="5px" height="5px"></Box>
-                    </SimpleGrid> */}
-                    <Text fontSize="3xl">Konav</Text>
-                    {/* const foo = Array.from(Array(numPixels).keys()) */}
-                    <KonvaStage canvasSize={1000} pixels={Array.from(Array(2500).keys())} gridColumns={50} pixelSize={20}/>
+                    {/* <Text fontSize="3xl">Konva</Text> */}
+                    {/* <KonvaStage changePixel={this.changePixelState} canvasSize={600} pixels={this.state.canvasState} gridColumns={50} pixelSize={12}/> */}
+                    <KonvaStage changePixel={this.changePixelState} canvasSize={50} pixels={this.state.canvasState} gridColumns={5} pixelSize={10}/>
                     </Flex>
+                    <ColorPicker changeBrush={this.changeBrush} />
               </Stack>
         </Container>
     );
