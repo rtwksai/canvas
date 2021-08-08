@@ -1,8 +1,8 @@
-# Canvas App
+# EveNFT
 
 ## Getting Started
 
-First you must compile and migrate the contracts
+First you must compile and migrate the contracts from this [Backend Repository](https://github.com/Dragonsa15/EveNFT-BackendSolidity/tree/staging)
 
 ```bash
 truffle develop
@@ -15,7 +15,7 @@ In another terminal run the frontend client
 To install the dependencies
 
 ```bash
-cd client && npm install
+cd canvas/client && npm install
 ```
 
 To, run the frontend client
