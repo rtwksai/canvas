@@ -62,7 +62,7 @@ return (
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        maxWidth="1000px"
+        maxWidth="1600px"
         width="100%"
         bg={bg}
         as="nav"
