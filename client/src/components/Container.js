@@ -10,6 +10,7 @@ import Footer from './Footer';
 const Container = ({ children }) => {
     const { colorMode } = useColorMode();
 
+    document.title="EveNFT"
     return (
         <>
             <Navbar />
@@ -24,7 +25,7 @@ const Container = ({ children }) => {
             >
                 {children}
             </Flex>
-            <Footer />
+            <Footer mt={1200}/>
         </>
     );
 };

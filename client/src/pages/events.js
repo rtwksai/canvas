@@ -18,6 +18,7 @@ import CanvasCard from "../components/CanvasCard";
 
 import SimpleStorageContract from "../contracts/SimpleStorage.json";
 import getWeb3 from "../getWeb3";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   state = { storageValue: 0, 
@@ -94,25 +95,29 @@ class App extends Component {
                     alignItems="flex-start"
                 >
                     <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
-                        Your Dashboard
+                        The EveNFT Gallery
                     </Heading>
                     <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
+                    <ChakraLink href="http://localhost:8000/canvas/2">
                       <CanvasCard 
                         key='Devfolio'
                         imageURL='test1.png'
-                        title='EthIndia Odyssey'
+                        title='EthOdyssey'
                         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
                         githubLink='https://github.com/DaKeiser/portfolio'
                         tag={["Online"]}
                       />
-                      <CanvasCard 
-                        key='Devfolio'
-                        imageURL='test1.png'
-                        title='EthIndia Odyssey'
-                        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
-                        githubLink='https://github.com/DaKeiser/portfolio'
-                        tag={["For Sale"]}
-                      />                      
+                      </ChakraLink>
+                      <ChakraLink href="http://localhost:8000/canvas/3">
+                        <CanvasCard 
+                          key='Devfolio'
+                          imageURL='test4.png'
+                          title='EthIndia'
+                          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt, lectus ac auctor mollis, odio risus mattis augue, et aliquet nulla ligula a metus."
+                          githubLink='https://github.com/DaKeiser/portfolio'
+                          tag={["For Sale"]}
+                        />
+                      </ChakraLink>
                     </SimpleGrid>   
                     </Flex>
               </Stack>

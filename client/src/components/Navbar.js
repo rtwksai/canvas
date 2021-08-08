@@ -26,7 +26,7 @@ const LINKS = [
     },
     {
         href: '/events',
-        text: 'events'
+        text: 'eveNFTs'
     },
     {
         href: '/user',

@@ -6,6 +6,7 @@ import {
   Image,
   Flex,
   Stack,
+  HStack,
   SimpleGrid,
   Heading,
   chakra,
@@ -28,7 +29,7 @@ class App extends Component {
             contract: null, 
             imageLoad: false, 
             setImageLoad: false};
-
+    
   render() {
     return (
         <Container>
@@ -45,11 +46,14 @@ class App extends Component {
                     alignItems="flex-start"
                 >
                     <Heading letterSpacing="tight" mb={8} as="h1" size="2xl">
-                        Hi user!
+                        Hi there!
                     </Heading>
-                    <Text> Add a new Event</Text>
-                    <EventForm />
-                    
+                    {/* <HStack> */}
+                    {/* <SimpleGrid columns={{ sm: 1, md: 2, lg: 2 }} spacing={8}> */}
+                    <EventForm m="4rem auto 4rem auto" color="green" text="Create Event" heading="Create a New EveNFT!" placeholder="Name your EveNFT"/>
+                    <EventForm m="4rem auto 4rem auto" color="blue" text="Edit Event" heading="Edit an EveNFT" placeholder="Enter EveNFT ID"/>
+                    {/* </SimpleGrid> */}
+                    {/* </HStack> */}
                     </Flex>
               </Stack>
         </Container>

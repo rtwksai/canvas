@@ -33,7 +33,7 @@ const KonvaStage = (props) => {
         width={props.canvasSize}
         height={props.canvasSize}
         style={{
-          'backgroundColor': "red",
+          // 'backgroundColor': "#eeeeee",
           'backgroundSize': props.pixelSize,
           'width': props.canvasSize,
         }}
